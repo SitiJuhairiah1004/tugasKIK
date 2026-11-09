@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fbf9;
+    color: #18352b;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    background: #087f4f;
+    color: white;
+
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 22px 0;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 3px solid white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 70, 45, 0.8),
+            rgba(0, 70, 45, 0.3)
+        ),
+        url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1400&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background: #0b8b55;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #056d43;
+}
+
+
+/* =========================
+   FITUR
+========================= */
+
+.fitur {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    background: white;
+
+    border: 1px solid #d5e5df;
+}
+
+.fitur-item {
+
+    text-align: center;
+
+    padding: 25px 10px;
+}
+
+.icon {
+
+    width: 50px;
+    height: 50px;
+
+    margin: auto;
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+
+    background: #087f4f;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 23px;
+}
+
+
+/* =========================
+   JUDUL HALAMAN
+========================= */
+
+.judul {
+
+    background: #edf8f3;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+}
+
+.judul h1 {
+    color: #173a2d;
+    margin-bottom: 8px;
+}
+
+.judul p {
+    color: #5d7068;
+}
+
+
+/* =========================
+   CEK PENYAKIT
+========================= */
+.cek-box {
+
+    background: white;
+
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.06);
+}
+
+.cek-box label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccd9d4;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.cek-box button {
+
+    display: block;
+
+    margin: 20px auto;
+
+    background: #087f4f;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 30px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.hasil {
+
+    background: #edf8f3;
+
+    border: 1px solid #cde6d9;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.cek-box {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cek-box h2 {
+    color: #2e7d32;
+    text-align: center;
+}
+
+.cek-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.cek-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.cek-box button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #2eaa9b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cek-box button:hover {
+    background: #238579;
+}
+
+.hasil {
+    display: none;
+    margin-top: 22px;
+    padding: 20px;
+    background: #f0f8ed;
+    border-left: 5px solid #4caf50;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+.hasil h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+/* =========================
+   DAFTAR PENYAKIT
+========================= */
+
+.penyakit-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 0 5% 40px;
+}
+
+.penyakit-card {
+
+    background: white;
+
+    border: 1px solid #d9e7e1;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.06);
+}
+
+.penyakit-card img {
+
+    width: 100%;
+
+    height: 170px;
+
+    object-fit: cover;
+}
+
+.card-content {
+
+    padding: 18px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+
+    font-size: 14px;
+
+    color: #586a63;
+
+    margin-bottom: 8px;
+}
+
+.card-content .btn {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   DETAIL
+========================= */
+
+.detail {
+
+    padding: 30px 5%;
+}
+
+.kembali {
+
+    color: #087f4f;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.detail-box {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        360px 1fr;
+
+    gap: 30px;
+
+    border-radius: 10px;
+}
+
+.detail-box img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.detail-info h1 {
+    margin-bottom: 15px;
+}
+
+.detail-info p {
+    margin: 12px 0;
+}
+
+.penanganan {
+
+    background: #edf8f3;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+}
+
+.penanganan h3 {
+
+    color: #087f4f;
+
+    margin-bottom: 10px;
+}
+
+.penanganan ol {
+
+    padding-left: 20px;
+}
+
+
+/* =========================
+   FORM LAPOR
+========================= */
+
+.form-lapor {
+
+    max-width: 1000px;
+
+    margin: auto;
+    margin-bottom: 50px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.06);
+}
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+
+    padding: 13px;
+
+    border: 1px solid #ccd9d4;
+
+    border-radius: 7px;
+
+    font-family: Arial;
+}
+
+.form-group textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.form-button {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+}
+
+.form-button button {
+
+    background: #087f4f;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 40px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #075b3a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   RESPONSIVE / HP
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .fitur {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .penyakit-container {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-box {
+        grid-template-columns: 1fr;
+    }
+
+    .form-lapor {
+        grid-template-columns: 1fr;
+        margin: 0 5% 40px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .fitur-item {
+        font-size: 12px;
+    }
+
+    .judul {
+        padding: 20px;
+    }
+
+}

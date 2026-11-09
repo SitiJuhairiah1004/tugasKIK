@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Penyakit - PlantCare</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="logo">🌿 PlantCare</div>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a class="active" href="cek.html">Cek Penyakit</a>
+        <a href="daftar.html">Daftar Penyakit</a>
+        <a href="lapor.html">Lapor Penyakit</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="cek-box">
+    <h2>Cek Gejala Tanaman 🌿</h2>
+
+    <label for="gejala">Pilih gejala:</label>
+
+    <select id="gejala">
+        <option value="">-- Pilih Gejala --</option>
+        <option value="kuning">Daun menguning</option>
+        <option value="bercak">Daun memiliki bercak</option>
+        <option value="busuk">Akar membusuk</option>
+        <option value="layu">Tanaman layu</option>
+        <option value="lubang">Daun berlubang</option>
+        <option value="keriting">Daun keriting</option>
+        <option value="putih">Lapisan putih pada daun</option>
+        <option value="rontok">Daun mudah rontok</option>
+        <option value="kering">Ujung daun kering</option>
+        <option value="lambat">Pertumbuhan tanaman lambat</option>
+    </select>
+
+    <button type="button" onclick="cekPenyakit()">
+        🔍 Cek Gejala
+    </button>
+
+    <div id="hasil" class="hasil"></div>
+</section>
+
+<script>
+  function cekPenyakit() {
+    const gejala = document.getElementById("gejala").value;
+    const hasil = document.getElementById("hasil");
+
+    const data = {
+        kuning: {
+            judul: "🌿 Kemungkinan Kekurangan Nutrisi",
+            penyebab: "Kekurangan nutrisi, penyiraman berlebihan, atau masalah akar.",
+            solusi: "Periksa kelembapan tanah dan drainase. Berikan pupuk sesuai kebutuhan tanaman."
+        },
+
+        bercak: {
+            judul: "🍂 Kemungkinan Bercak Daun",
+            penyebab: "Infeksi jamur atau bakteri, atau kerusakan akibat lingkungan.",
+            solusi: "Buang daun yang rusak parah, jaga kebersihan tanaman, dan hindari membasahi daun saat menyiram."
+        },
+
+        busuk: {
+            judul: "🌱 Kemungkinan Busuk Akar",
+            penyebab: "Tanah terlalu basah atau drainase yang buruk.",
+            solusi: "Kurangi penyiraman berlebihan dan pastikan pot memiliki lubang drainase."
+        },
+
+        layu: {
+            judul: "🥀 Tanaman Layu",
+            penyebab: "Kekurangan air atau gangguan pada akar.",
+            solusi: "Periksa tanah. Siram jika kering. Jika tanah tetap basah tetapi tanaman layu, periksa kondisi akar."
+        },
+
+        lubang: {
+            judul: "🐛 Kemungkinan Serangan Hama",
+            penyebab: "Ulat, siput, atau hama pemakan daun lainnya.",
+            solusi: "Periksa bagian bawah daun dan singkirkan hama yang terlihat jika memungkinkan."
+        },
+
+        keriting: {
+            judul: "🍃 Daun Keriting",
+            penyebab: "Hama seperti kutu daun atau kondisi lingkungan yang tidak sesuai.",
+            solusi: "Periksa bagian bawah daun untuk menemukan hama dan sesuaikan penyiraman."
+        },
+
+        putih: {
+            judul: "⚪ Kemungkinan Embun Tepung",
+            penyebab: "Lapisan putih bisa disebabkan embun tepung atau endapan pada daun.",
+            solusi: "Periksa kondisi daun dan tingkatkan sirkulasi udara. Pastikan penyebabnya sebelum melakukan penanganan."
+        },
+
+        rontok: {
+            judul: "🍂 Daun Mudah Rontok",
+            penyebab: "Perubahan lingkungan, penyiraman yang tidak sesuai, atau gangguan akar.",
+            solusi: "Periksa kelembapan tanah, pencahayaan, dan kondisi akar."
+        },
+
+        kering: {
+            judul: "☀️ Ujung Daun Kering",
+            penyebab: "Kekurangan air, panas berlebihan, atau penumpukan pupuk.",
+            solusi: "Periksa kelembapan tanah dan paparan sinar matahari. Hindari pemupukan berlebihan."
+        },
+
+        lambat: {
+            judul: "🌿 Pertumbuhan Tanaman Lambat",
+            penyebab: "Cahaya kurang, nutrisi tidak mencukupi, atau media tanam kurang sesuai.",
+            solusi: "Sesuaikan pencahayaan dengan jenis tanaman dan periksa kondisi media tanam."
+        }
+    };
+
+    if (gejala === "") {
+        hasil.style.display = "block";
+        hasil.innerHTML = "<p>Silakan pilih gejala terlebih dahulu.</p>";
+        return;
+    }
+
+    const pilihan = data[gejala];
+
+    hasil.style.display = "block";
+    hasil.innerHTML = `
+        <h3>${pilihan.judul}</h3>
+        <p><b>Gejala:</b> ${document.getElementById("gejala").options[document.getElementById("gejala").selectedIndex].text}</p>
+        <p><b>Kemungkinan penyebab:</b> ${pilihan.penyebab}</p>
+        <p><b>Solusi:</b> ${pilihan.solusi}</p>
+        <p><i>Catatan: ini merupakan panduan awal, bukan diagnosis pasti.</i></p>
+    `;
+  }
+</script>
+</main>
+
+<footer>
+    © 2026 PlantCare
+</footer>
+
+
+</body>
+</html>
